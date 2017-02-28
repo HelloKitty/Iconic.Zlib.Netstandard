@@ -4,7 +4,7 @@ Iconic.Zlib.Netstandard is an open-source .NETSTANDARD, .NETCORE, and .NETFRAMEW
 
 ## Builds
 
-Available on a Nuget: https://www.nuget.org/packages/Reflect.Extent
+Available on a Nuget: https://www.nuget.org/packages/Iconic.Zlib.Netstandard
 
 ##Tests
 
