@@ -1,4 +1,4 @@
-#Iconic.Zlib.Netstandard
+# Iconic.Zlib.Netstandard
 
 Iconic.Zlib.Netstandard is an open-source .NETSTANDARD, .NETCORE, and .NETFRAMEWORK compatible port of the Iconic.Zlib library.
 
@@ -8,7 +8,7 @@ It does not contain a multithreaded decompression stream due to netstandard1.3 n
 
 Available on a Nuget: https://www.nuget.org/packages/Iconic.Zlib.Netstandard
 
-##Tests
+## Tests
 
 TODO Setup Mono tests
 
@@ -16,6 +16,6 @@ TODO Setup Mono tests
 
 (Done locally)
 
-##Licensing
+## Licensing
 
-MIT Baby
+MIT
