@@ -18,4 +18,4 @@ TODO Setup Mono tests
 
 ## Licensing
 
-MIT
+My changes/diff are licensed under MIT. The original Dotnetzip source's [license can be found here](http://dotnetzip.codeplex.com/license) and I'm also obligated to license this new version under the original license.
