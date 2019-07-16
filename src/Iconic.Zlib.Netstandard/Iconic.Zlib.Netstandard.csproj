@@ -1,17 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard1.3;uap10.0</TargetFramework>
     <Authors>https://github.com/HelloKitty</Authors>
     <PackageProjectUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</PackageLicenseUrl>
-    <Description>A .NETStandard port of Iconic.Zlib from DotNetZip project.</Description>
+    <Description>A .NETStandard and UWP port of Iconic.Zlib from DotNetZip project.</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</RepositoryUrl>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard1.3\Iconic.Zlib.Netstandard.xml</DocumentationFile>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'uap10.0'">
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <NugetTargetMoniker>UAP,Version=v10.0</NugetTargetMoniker>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <TargetFrameworkIdentifier>.NETCore</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <DefineConstants>$(DefineConstants);WINDOWS_UWP</DefineConstants>
+    <LanguageTargets>$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets</LanguageTargets>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+    <TargetFramework>netstandard1.3</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <TargetFrameworks>netstandard1.3;uap10.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform " Version="6.2.8" />
+  </ItemGroup>
+
+  <!--<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.3\Iconic.Zlib.Netstandard.xml</DocumentationFile>
+  </PropertyGroup>-->
 
 </Project>
