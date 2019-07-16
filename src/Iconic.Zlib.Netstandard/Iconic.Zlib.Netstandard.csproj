@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3;uap10.0</TargetFramework>
+    <TargetFramework>netstandard2.0;net452;netstandard1.3;uap10.0</TargetFramework>
     <Authors>https://github.com/HelloKitty</Authors>
     <PackageProjectUrl>https://github.com/ramtinak/Iconic.Zlib.Netstandard</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -11,8 +11,9 @@
     <RepositoryUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</RepositoryUrl>
     <PackageLicenseFile>LICENSE.jzlib.txt</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Iconic.Zlib.Netstandard</PackageId>
-    <Product>Iconic.Zlib.Netstandard</Product>
+    <PackageId>Iconic.Zlib.NetstandardUwp</PackageId>
+    <Product>Iconic.Zlib.NetstandardUwp</Product>
+    <Version>1.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Include="LICENSE.jzlib.txt" Pack="true" Visible="false" PackagePath="" />
@@ -32,10 +33,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard2.0;netstandard1.3</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-    <TargetFrameworks>netstandard1.3;uap10.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452;netstandard1.3;uap10.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform " Version="6.2.8" />
