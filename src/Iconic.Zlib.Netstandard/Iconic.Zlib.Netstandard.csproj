@@ -11,9 +11,11 @@
     <RepositoryUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</RepositoryUrl>
     <PackageLicenseFile>LICENSE.jzlib.txt</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Iconic.Zlib.Netstandard</PackageId>
+    <Product>Iconic.Zlib.Netstandard</Product>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="LICENSE.jzlib.txt" Pack="true" Visible="false" PackagePath=""/>
+    <None Include="LICENSE.jzlib.txt" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'uap10.0'">
     <DefaultLanguage>en-US</DefaultLanguage>
