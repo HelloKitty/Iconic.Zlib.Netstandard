@@ -3,12 +3,18 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3;uap10.0</TargetFramework>
     <Authors>https://github.com/HelloKitty</Authors>
-    <PackageProjectUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ramtinak/Iconic.Zlib.Netstandard</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <!--<PackageLicenseUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</PackageLicenseUrl>-->
     <Description>A .NETStandard and UWP port of Iconic.Zlib from DotNetZip project.</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.jzlib.txt</PackageLicenseFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="LICENSE.jzlib.txt" Pack="true" Visible="false" PackagePath=""/>
+  </ItemGroup>
   <PropertyGroup Condition="'$(TargetFramework)' == 'uap10.0'">
     <DefaultLanguage>en-US</DefaultLanguage>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
