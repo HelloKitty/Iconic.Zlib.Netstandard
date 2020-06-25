@@ -8,7 +8,15 @@
     <Description>A .NETStandard port of Iconic.Zlib from DotNetZip project.</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard1.3\Iconic.Zlib.Netstandard.xml</DocumentationFile>
