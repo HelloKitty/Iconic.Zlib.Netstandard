@@ -1,19 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0;net452;netstandard1.3;uap10.0</TargetFramework>
+    <TargetFramework>netstandard2.0;net452;netstandard1.3;uap10.0;netcoreapp1.0;netcoreapp3.1;net5.0</TargetFramework>
     <Authors>https://github.com/HelloKitty</Authors>
     <PackageProjectUrl>https://github.com/ramtinak/Iconic.Zlib.Netstandard</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <!--<PackageLicenseUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</PackageLicenseUrl>-->
-    <Description>A .NETStandard and UWP port of Iconic.Zlib from DotNetZip project.</Description>
+    <Description>A .NET5, .NETCore, .NETStandard and UWP port of Iconic.Zlib from DotNetZip project.</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/HelloKitty/Iconic.Zlib.Netstandard</RepositoryUrl>
     <PackageLicenseFile>LICENSE.jzlib.txt</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Iconic.Zlib.NetstandardUwp</PackageId>
     <Product>Iconic.Zlib.NetstandardUwp</Product>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>v1.0.2
+- NET 5 and NET Core support</PackageReleaseNotes>
+    <PackageTags>Zlib Iconic net5 netcore netstandard zip gzip deflate inflate</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <None Include="LICENSE.jzlib.txt" Pack="true" Visible="false" PackagePath="" />
@@ -33,10 +36,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-    <TargetFramework>netstandard2.0;netstandard1.3</TargetFramework>
+    <TargetFramework>netstandard2.0;netstandard1.3;netcoreapp1.0;netcoreapp3.1;net5.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-    <TargetFrameworks>netstandard2.0;net452;netstandard1.3;uap10.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net452;netstandard1.3;uap10.0;netcoreapp1.0;netcoreapp3.1;net5.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform " Version="6.2.8" />
