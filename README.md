@@ -1,6 +1,6 @@
 # Iconic.Zlib.Netstandard
 
-Iconic.Zlib.Netstandard is an open-source .NETSTANDARD, .NETCORE, and .NETFRAMEWORK compatible port of the Iconic.Zlib library.
+Iconic.Zlib.Netstandard is an open-source .NETSTANDARD, .NETCORE, UWP and .NETFRAMEWORK compatible port of the Iconic.Zlib library.
 
 It does not contain a multithreaded decompression stream due to netstandard1.3 not having the Threadpool.
 
