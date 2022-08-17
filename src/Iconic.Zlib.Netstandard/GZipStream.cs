@@ -560,10 +560,9 @@ namespace Ionic.Zlib
 		///
 		/// <remarks>
 		/// <para>
-		///   The working buffer is used for all stream operations.  The default size is
-		///   1024 bytes.  The minimum size is 128 bytes. You may get better performance
-		///   with a larger buffer.  Then again, you might not.  You would have to test
-		///   it.
+		///   The working buffer is used for all stream operations. The Default size is 8192 bytes
+		///   on NETCF; 16384 bytes otherwise. The minimum size is 128 bytes. You may get better
+		///   performance with a larger buffer. Then again, you might not. You would have to test it.
 		/// </para>
 		///
 		/// <para>
